@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script language="javascript" type="text/javascript">
+        var created = 0;
+
+        function ShowSecondMenu(first_value) {
+        
+        	if (created == 1) {
+                removeDrop();
+            }
+            
+            //call the first menu
+            var FirstMenu = document.getElementById('FirstMenu');
+            
+            //place the second menu
+            var placement = document.getElementById('SecondMenuDiv');
+            var SecondMenu = document.createElement('select');
+            SecondMenu.setAttribute('id',"SecondMenu");
+            placement.appendChild(SecondMenu);
+
+            // wipe the old second menu
+
+            document.getElementById("SecondMenu").length = 0;
+
+            // lay out the options correlating to each case
+
+            switch (first_value) {
+
+                case "baby names" :
+                document.getElementById("SecondMenu").options[0] = new Option("Metric","");
+                document.getElementById("SecondMenu").options[1] = new Option("Overall Popularity","Overall Popularity");
+                document.getElementById("SecondMenu").options[2] = new Option("Boy Popularity","Boy Popularity");
+                document.getElementById("SecondMenu").options[3] = new Option("Girl Popularity","Girl Popularity");
+                document.getElementById("SecondMenu").options[4] = new Option("Past 5 Years Popularity","Past 5 Years Popularity");
+                break;
+
+                case "cities" :
+                document.getElementById("SecondMenu").options[0] = new Option("Metric","");
+                document.getElementById("SecondMenu").options[1] = new Option("Population","Population");
+                document.getElementById("SecondMenu").options[2] = new Option("Area (total square mileage)","Area");
+                document.getElementById("SecondMenu").options[3] = new Option("Highest Cost of Living","Cost of Living");
+                document.getElementById("SecondMenu").options[4] = new Option("GDP","GDP");
+                document.getElementById("SecondMenu").options[5] = new Option("Sports Championships","Sports Championships");
+                document.getElementById("SecondMenu").options[6] = new Option("Oldest","Oldest");
+                break;
+
+                case "colleges" :
+                document.getElementById("SecondMenu").options[0] = new Option("Metric","");
+                document.getElementById("SecondMenu").options[1] = new Option("Student Population","Student Population");
+                document.getElementById("SecondMenu").options[2] = new Option("Student Satisfaction","Student Satisfaction");
+                document.getElementById("SecondMenu").options[3] = new Option("US News Ranking","Ranking");
+                document.getElementById("SecondMenu").options[4] = new Option("Student-to-teacher Ratio","S2TRatio");
+                document.getElementById("SecondMenu").options[5] = new Option("Athletic Championships","Athletic Championships");
+                document.getElementById("SecondMenu").options[6] = new Option("Largest Endowment","Endowment");
+                break;
+
+                case "books" :
+                document.getElementById("SecondMenu").options[0] = new Option("Metric","");
+                document.getElementById("SecondMenu").options[1] = new Option("Best Selling","Best Selling");
+                document.getElementById("SecondMenu").options[2] = new Option("Nobel Laureates (by author)","Nobel Laureates");
+                break;
+
+                case "movies" :
+                document.getElementById("SecondMenu").options[0] = new Option("Metric","");
+                document.getElementById("SecondMenu").options[1] = new Option("Gross Box Office Sales","Gross Box Office Sales");
+                document.getElementById("SecondMenu").options[2] = new Option("Opening Day Earnings","Opening Day Earnings");
+                document.getElementById("SecondMenu").options[3] = new Option("Oscars Won","Oscars Won");
+                document.getElementById("SecondMenu").options[4] = new Option("Critic Reviews","Critic Reviews");
+                document.getElementById("SecondMenu").options[5] = new Option("Fan Reviews","Fan Reviews");
+                break;
+
+                case "albums" :
+                document.getElementById("SecondMenu").options[0] = new Option("Metric","");
+                document.getElementById("SecondMenu").options[1] = new Option("Gross Sales","Gross Sales");
+                document.getElementById("SecondMenu").options[2] = new Option("Grammys Won","Grammys Won");
+                document.getElementById("SecondMenu").options[3] = new Option("Gross Sales: Rock","Gross Sales: Rock");
+                document.getElementById("SecondMenu").options[4] = new Option("Gross Sales: Pop","Gross Sales: Pop");
+                document.getElementById("SecondMenu").options[5] = new Option("Gross Sales: Rap","Gross Sales: Rap");
+                break;
+
+                case "songs" :
+                document.getElementById("SecondMenu").options[0] = new Option("Metric","");
+                document.getElementById("SecondMenu").options[1] = new Option("Gross Sales","Gross Sales");
+                document.getElementById("SecondMenu").options[2] = new Option("Grammys Won","Grammys Won");
+                document.getElementById("SecondMenu").options[3] = new Option("Gross Sales: Rock","Gross Sales: Rock");
+                document.getElementById("SecondMenu").options[4] = new Option("Gross Sales: Pop","Gross Sales: Pop");
+                document.getElementById("SecondMenu").options[5] = new Option("Gross Sales: Rap","Gross Sales: Rap");
+                break;
+
+                case "tv shows" :
+                document.getElementById("SecondMenu").options[0] = new Option("Metric","");
+                document.getElementById("SecondMenu").options[1] = new Option("Total Airtime","Total Airtime");
+                document.getElementById("SecondMenu").options[2] = new Option("Ratings","Ratings");
+                document.getElementById("SecondMenu").options[3] = new Option("Emmys Won","Emmys Won");
+                break;
+
+                case "countries" :
+                document.getElementById("SecondMenu").options[0] = new Option("Metric","");
+                document.getElementById("SecondMenu").options[1] = new Option("Population","Population");
+                document.getElementById("SecondMenu").options[2] = new Option("Area (total square mileage)","Area");
+                document.getElementById("SecondMenu").options[3] = new Option("Highest Cost of Living","Cost of Living");
+                document.getElementById("SecondMenu").options[4] = new Option("Average GDP","GDP");
+                document.getElementById("SecondMenu").options[5] = new Option("World Cups","World Cups");
+                document.getElementById("SecondMenu").options[6] = new Option("Olympic Medals","Olympic Medals");
+                document.getElementById("SecondMenu").options[7] = new Option("Education","Education");
+                document.getElementById("SecondMenu").options[8] = new Option("Public Transportation","Public Transportation");
+                document.getElementById("SecondMenu").options[9] = new Option("Defense Spending","Defense Spending");
+                document.getElementById("SecondMenu").options[10] = new Option("Freedom Index","Freedom Index");
+                document.getElementById("SecondMenu").options[11] = new Option("Incarceration Rates","Incarceration Rates");
+                document.getElementById("SecondMenu").options[12] = new Option("Mass Shootings","Mass Shootings");
+                break;
+
+                case "dog breeds" :
+                document.getElementById("SecondMenu").options[0] = new Option("Metric","");
+                document.getElementById("SecondMenu").options[1] = new Option("Overall Popularity","Overall Popularity");
+                document.getElementById("SecondMenu").options[2] = new Option("Most Expensive","Most Expensive");
+                break;
+            }
+            created = 1;
+            return true;
+        }
+        
+        
+        function removeDrop() {
+            var d = document.getElementById('SecondMenuDiv');
+
+            var oldmenu = document.getElementById('SecondMenu');
+
+            d.removeChild(oldmenu);
+        }
+            
+        </script>
+    </head>
+<body>
+
+<div id="FirstMenuDiv">Choose your subject:
+    <select id="FirstMenu" name="subject" onchange="javascript: ShowSecondMenu(this.options[this.selectedIndex].value);">
+        <option selected value = "base">Please Select Subject</option>
+        <option value = "baby names">Baby Names</option>
+        <option value = "cities">Cities</option>
+        <option value = "colleges">Colleges</option>
+        <option value = "books">Books</option>
+        <option value = "movies">Movies</option>
+        <option value = "songs">Songs</option>
+        <option value = "albums">Albums</option>
+        <option value = "tv shows">TV Shows</option>
+        <option value = "countries">Countries</option>
+        <option value = "dog breeds">Dog Breeds</option>
+    </select>
+</div>
+
+<div id="SecondMenuDiv">Choose your metric:
+</div>
+
+</body>
+</html>
