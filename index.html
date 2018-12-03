@@ -1,31 +1,89 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" >
+
+
+
+
 <head>
-    <link href="style.css" rel="stylesheet" type="text/css"/>
+  <meta charset="UTF-8">
+  <title>Listicle Generator</title>
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,700" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-<div class="title-box">
-    <center><p style="font-family: 'Raleway', 'MS Sans Serif', arial; font-size: 50px; text-align:center; line-height:200%; margin:0px; color:#FFFFFF; clear:both;"><b>Create a Top 10 List!</b></p></center>
+
+  <div class="container">
+  <div class="jumbotron">
+    <div class="row">
+        <h1 class="text-center">Top Ten...</h1>
+        <h1 class="text-center" id="topic">Cities by Population</h1>
+        <br />
+
+      <input type="file" onchange=read(this)>
+
+      <div class="output"></div>
+
+      <div id="list entry">
+      <h2 class="text-left" id="row0col0">10. Shenzhen, China - 12,528,300</h2>
+        
+        <div class="thumbnail" id="entry image"><img id='row0img' src='/Users/danielknight/Desktop/listicles/downloads/Iconic Stanford University 4.15/1. page_1_thumb_large.jpg'>
+        </div>
+          
+            <div id="row0col1">Shenzhen is a major city in Guangdong Province, China, which forms part of the Pearl River Delta megalopolis north of Hong Kong. It holds sub-provincial administrative status, with powers slightly less than a province.</div> 
+       <br /> <br />
+     </div>
+
+
+      <div class="output"></div>
+
+      <div id="list entry">
+      <h2 class="text-left" id="row1col0">10. Shenzhen, China - 12,528,300</h2>
+        
+        <div class="thumbnail" id="entry image"><img id='row1img' src="https://upload.wikimedia.org/wikipedia/commons/d/d7/Shenzhen_CBD_and_River.jpg">
+        </div>
+          
+            <div id="row1col1">Shenzhen is a major city in Guangdong Province, China, which forms part of the Pearl River Delta megalopolis north of Hong Kong. It holds sub-provincial administrative status, with powers slightly less than a province.</div> 
+       <br /> <br />
+     </div>
+
+      <div class="output"></div>
+
+      <div id="list entry">
+      <h2 class="text-left" id="row2col0">10. Shenzhen, China - 12,528,300</h2>
+        
+        <div class="thumbnail" id="entry image"><img id='row2img' src="https://upload.wikimedia.org/wikipedia/commons/d/d7/Shenzhen_CBD_and_River.jpg">
+        </div>
+          
+            <div id="row2col1">Shenzhen is a major city in Guangdong Province, China, which forms part of the Pearl River Delta megalopolis north of Hong Kong. It holds sub-provincial administrative status, with powers slightly less than a province.</div> 
+       <br /> <br /
+        
+
+
+    </div> 
+  </div>
 </div>
 
-<section id="header-container">
-    <select>
-        <option disabled>What do you want to rank today?</option>
-        <option value="choix-2">Inception</option>
-        <option value="choix-3">Godzilla</option>
-        <option value="choix-4">Back to the future</option>
-        <option value="choix-5">Shutter Island</option>
-    </select>
-    <select>
-        <option disabled>What metric do you want to use?</option>
-        <option value="choix-2">Inception</option>
-        <option value="choix-3">Godzilla</option>
-        <option value="choix-4">Back to the future</option>
-        <option value="choix-5">Shutter Island</option>
-    </select>
-</section>
-</body>
 
-<script src="js/script.js"></script>
+    <!-- <script data-main="scripts/main" src="js/require.js"></script> -->
+    <!-- <script src="jquery-csv.js"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.js"></script> -->
+    <!-- PAPAPARSE -->
+
+    <!-- <script src="js/papaparse.min.js"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/4.1.2/papaparse.min.js"></script> -->
+    <!-- /Users/danielknight/node_modules -->
+
+    <!-- <script src="jquery-3.3.1.min.js"></script> -->
+    <!-- <script type="text/javascript" src="/browserify.js"></script> -->
+    <script src="dans.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- <script  src="js/dans.js"></script> -->
+    <!-- <script  src="js/index.js"></script> -->
+
+
+</body>
 </html>

@@ -1,12 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link href="style.css" rel="stylesheet" type="text/css"/>
+    <link href="frontpage.css" rel="stylesheet" type="text/css"/>
+    <!-- <script src="bundle.js"></script> -->
     <script language="javascript" type="text/javascript">
 var created = 0;
+// first_value_global = null
+
+function createList() {
+    text = first_value_global+'%'+second_value_global
+    var element = document.createElement('a');
+    element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+    element.setAttribute('download', 'inputs.txt');
+    element.style.display = 'none';
+    document.body.appendChild(element);
+    element.click();
+    document.body.removeChild(element);
+    console.log('inputs.txt created');
+}
+
 function ShowSecondMenu(first_value) {
 
-  if (created == 1) {
+    first_value_global = first_value
+
+    if (created == 1) {
         removeDrop();
     }
 
@@ -17,6 +34,13 @@ function ShowSecondMenu(first_value) {
     var placement = document.getElementById('SecondMenuDiv');
     var SecondMenu = document.createElement('select');
     SecondMenu.setAttribute('id',"SecondMenu");
+    SecondMenu.addEventListener('change', function() { 
+        let value = this.options[this.selectedIndex].value
+        second_value_global = value
+        document.getElementById('buttonOne').style.display = "inline-block"},
+     false
+  );
+
     placement.appendChild(SecondMenu);
     // wipe the old second menu
     document.getElementById("SecondMenu").length = 0;
@@ -137,11 +161,10 @@ function removeDrop() {
       <option value = "countries">Countries</option>
       <option value = "dog breeds">Dog Breeds</option>
     </select>
-    <div id="SecondMenuDiv">
-    </div>
+    <div id="SecondMenuDiv"></div>
+    <br>
+    <button id="buttonOne" style="display:none;" type="button" onclick="javascript: createList();">Create List(s)</button>
+
 </section>
 </body>
-
-
-<script src="js/script.js"></script>
 </html>
