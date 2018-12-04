@@ -6,7 +6,6 @@
     <script language="javascript" type="text/javascript">
 var created = 0;
 // first_value_global = null
-
 function createList() {
     text = first_value_global+'%'+second_value_global
     var element = document.createElement('a');
@@ -17,30 +16,25 @@ function createList() {
     element.click();
     document.body.removeChild(element);
     console.log('inputs.txt created');
+    document.getElementById('two').removeAttribute('style');
 }
-
 function ShowSecondMenu(first_value) {
-
     first_value_global = first_value
-
     if (created == 1) {
         removeDrop();
     }
-
     //call the first menu
     var FirstMenu = document.getElementById('FirstMenu');
-
     //place the second menu
     var placement = document.getElementById('SecondMenuDiv');
     var SecondMenu = document.createElement('select');
     SecondMenu.setAttribute('id',"SecondMenu");
-    SecondMenu.addEventListener('change', function() { 
+    SecondMenu.addEventListener('change', function() {
         let value = this.options[this.selectedIndex].value
         second_value_global = value
         document.getElementById('buttonOne').style.display = "inline-block"},
      false
   );
-
     placement.appendChild(SecondMenu);
     // wipe the old second menu
     document.getElementById("SecondMenu").length = 0;
@@ -130,15 +124,31 @@ function ShowSecondMenu(first_value) {
     created = 1;
     return true;
 }
-
-
 function removeDrop() {
     var d = document.getElementById('SecondMenuDiv');
     var oldmenu = document.getElementById('SecondMenu');
     d.removeChild(oldmenu);
 }
-
 </script>
+
+<style>
+
+  #tohide{
+    visibility:hidden;
+  }
+
+  .upload{
+    border-radius: 5px;
+    color:#EC6F66;
+    background-color:white;
+    width: 310px;
+    height: 50px;
+  }
+
+  .upload:hover{
+    cursor: pointer;
+  }
+</style>
 
 </head>
 
@@ -163,8 +173,12 @@ function removeDrop() {
     </select>
     <div id="SecondMenuDiv"></div>
     <br>
-    <button id="buttonOne" style="display:none;" type="button" onclick="javascript: createList();">Create List(s)</button>
-
+    <button id="buttonOne" style="display:none;" type="button" onclick="javascript: createList();">Find Table</button>
+    <input type = "file" id= "tohide">
+    <input type="button" value = "Generate List" id="two" class="upload" onClick="document.getElementById('tohide').click()" style="display:none;" onchange=read(this)/>
 </section>
+
+<script src="secondpage.js"></script>
+
 </body>
 </html>
