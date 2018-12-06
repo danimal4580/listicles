@@ -141,35 +141,38 @@ def createWikiTitle(newKey):
 	if name == 'baby name':
 		return 'List of most popular given names'
 	elif name == 'cities':
-		return "List of most populous cities in the United States by decade"
+		return 'List of most populous cities'
 	elif name == 'colleges':
-		return 'Rankings of universities in the United States'
-	elif name == 'dog breeds':
-		return 'List of dog breeds'
+		return 'Rankings of universities'
 	elif name == 'movies': #not great but ok
 		return 'Academy Award for Best Picture'
 	elif name == 'books':
 		return 'Le Monde\'s 100 Books of the Century'
-	elif name == 'vacation spots':
-		return 'Tourist attractions in the United States'
 	elif name == 'albums':
-		return 'List of best-selling albums by year in the United States'
+		return 'List of best albums'
+	elif name == 'songs':
+		return 'List of best songs'
 	elif name == 'tv shows':
-		return 'Top-rated United States television programs by season'
+		return 'Highest rated television shows and programs'
+	elif name == 'countries':
+		return 'List of countries with the highest population'
+	elif name == 'dog breeds':
+		return 'List of dog breeds'
 	else:
 		return "List of most populous cities in the United States by decade"
 
 ##dictionary to map names to possible metrics
 nameMetrics = {}
-nameMetrics["baby name"] = ["overall popularity","boy popularity","girl popularity","past 5 years overall","past 5 years boy","past 5 years girl"]
-nameMetrics["cities"] = ["population","total square distance","cost of living","education"]
-nameMetrics["colleges"] = ["student population","student satisfaction","US News and World Report","student to teacher ratio","endowment"]
-nameMetrics["dog breeds"] = ["overall popularity","past 5 years popularity"]
-nameMetrics["movies"] = ["oscars won","total money made","rotten tomatoes reviews","opening day earnings","opening week earnings","meta critic reviews","total tickets purchased"]
-nameMetrics["books"] = ["total money made", "critic reviews", "average reader reviews", "books sold in last year"]
-nameMetrics["vacation spots"] = ["most visitors", "prettiest","cost effecient"]
-nameMetrics["albums"] = ["general opinion", "total records sold","records sold in first year", "records sold in first year","grammys won"]
-nameMetrics["tv shows"] = ["general opinon","total airtime","average viewership","emmys won"]
+nameMetrics["baby names"] = ["overall popularity","boy popularity","girl popularity","5 year popularity boy","5 year popularity girl"]
+nameMetrics["cities"] = ["population","area","cost of living","GDP","sports championships","oldest"]
+nameMetrics["colleges"] = ["student population","student satisfaction","ranking","S2Tratio","athletic championships","endowment"]
+nameMetrics["books"] = ["best selling", "nobel laureates"]
+nameMetrics["movies"] = ["box office sales","opening day earnings","oscars won","critic reviews","fan reviews"]
+nameMetrics["albums"] = ["gross sales","grammys won", "gross sales: rock","gross sales: pop","gross sales: rap"]
+nameMetrics["songs"] = ["gross sales","grammys won", "gross sales: rock","gross sales: pop","gross sales: rap"]
+nameMetrics["tv shows"] = ["total airtime","ratings","emmys won"]
+nameMetrics["countries"] = ["population","area","cost of living","GDP","world cups","olympic medals","education","public transportation","defense spending","freedom index","incarceration rate","mass shootings"]
+nameMetrics["dog breeds"] = ["overall popularity","most expensive"]
 
 
 
